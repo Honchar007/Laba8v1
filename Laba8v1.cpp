@@ -3,9 +3,12 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include "modulewithNs.h"
+using namespace matrix;
+using namespace std;
 int main()
 {
+	GetRandomMatrix();
     std::cout << "Hello World!\n"; 
 }
 
