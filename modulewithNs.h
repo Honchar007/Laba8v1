@@ -3,6 +3,6 @@
 namespace matrix
 {
 void GetRandomMatrix();
-void Sum();
-void Show();
+void Sum(int** matrix, int cols, int rows);
+void Show(int** matrix, int cols, int rows);
 }

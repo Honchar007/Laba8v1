@@ -5,6 +5,9 @@
 #include <iomanip>
 using namespace matrix;
 using namespace std;
+void matrix::Show(int** matrix, int cols, int rows) {
+
+}
 void matrix::GetRandomMatrix() 
 {
 	// create Matrix
@@ -30,11 +33,13 @@ void matrix::GetRandomMatrix()
 		for (int j = 0; j < cols; j++)
 		{
 			Matrix[i][j] = min + rand() %  max ; 
-			cout <<setw(4)<< Matrix[i][j];
+		
 		}
 		cout << endl;
 	}
-	Sum();
+	Show(Matrix, cols, rows);
+
+	Sum(Matrix,cols, rows);
 	
 
 	// delete matrix 
@@ -45,8 +50,38 @@ void matrix::GetRandomMatrix()
 	delete[] Matrix;
 	
 }
-void matrix::Sum() 
+void matrix::Sum(int** matrix, int cols, int rows)
 	{
+	int n = 0; int max;
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			n+= matrix[i][j];
+		}
+	}
+	matrix[rows ][cols ] = n;
+	for (int i = 0; i < rows; i++)
+	{
+		n = 0;
+		for (int j = 0; j < cols; j++)
+		{
+			n += matrix[i][j];
+		}
+		matrix[i][cols] = n;
+		
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		n = 0;
+		for (int j = 0; j < cols; j++)
+		{
+			n += matrix[j][i];
+			
+		}
+		matrix[i][rows] = n;
+	}
+
 
 	}
-	void Show();
+	
