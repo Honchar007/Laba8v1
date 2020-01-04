@@ -1,4 +1,1 @@
-﻿  modulewithNs.cpp
-c:\users\superpc\source\repos\laba8v1\modulewithns.cpp(25): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-c:\users\superpc\source\repos\laba8v1\modulewithns.cpp(55): warning C4101: max: неиспользованная локальная переменная
-  Laba8v1.vcxproj -> C:\Users\SuperPC\source\repos\Debug\Laba8v1.exe
+﻿  Laba8v1.vcxproj -> C:\Users\SuperPC\source\repos\Debug\Laba8v1.exe

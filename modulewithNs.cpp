@@ -5,8 +5,18 @@
 #include <iomanip>
 using namespace matrix;
 using namespace std;
-void matrix::Show(int** matrix, int cols, int rows) {
+void matrix::Show(int** matrix, int cols, int rows) 
+{
+	cout << endl;
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			cout<< setw(15)<<matrix[i][j] ;
 
+		}
+		cout << endl;
+	}
 }
 void matrix::GetRandomMatrix() 
 {
@@ -35,7 +45,7 @@ void matrix::GetRandomMatrix()
 			Matrix[i][j] = min + rand() %  max ; 
 		
 		}
-		cout << endl;
+		
 	}
 	Show(Matrix, cols, rows);
 
@@ -71,17 +81,18 @@ void matrix::Sum(int** matrix, int cols, int rows)
 		matrix[i][cols] = n;
 		
 	}
-	for (int i = 0; i < rows; i++)
+	for (int i = 0; i < cols; i++)
 	{
 		n = 0;
-		for (int j = 0; j < cols; j++)
+		for (int j = 0; j < rows; j++)
 		{
 			n += matrix[j][i];
 			
 		}
-		matrix[i][rows] = n;
+		matrix[rows][i] = n;
+		
 	}
-
+	Show(matrix, cols + 1, rows + 1);
 
 	}
 	
